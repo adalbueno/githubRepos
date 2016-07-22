@@ -1,0 +1,23 @@
+<form name="frmGithub"
+      class="form wrapper"
+      ng-submit="ctrl.loadRepos(ctrl.model.username)">
+
+  <div class="form-item">
+    <input type="text"
+           class="form-input"
+           placeholder="Type Github user name"
+           ng-model="ctrl.model.username"></input>
+    <input type="submit"
+           class="form-btn"
+           value="Load repositories"></input>
+  </div>
+</form>
+
+<div class="wrapper">
+  <div class="error" ng-if="ctrl.error" ng-bind="ctrl.error"></div>
+  <ul class="list" ng-if="ctrl.repos">
+    <li class="list__item" ng-repeat="repo in ctrl.repos track by $index">
+      <github-repo ng-model="repo"></github-repo>
+    </li>
+  </ul>
+</div>

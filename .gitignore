@@ -1,0 +1,13 @@
+**/node_modules
+**/bower_components
+**/dist
+
+*.DS_Store
+*.log
+*npm-debug*.*
+*.TMP
+
+*.vscode
+.vs
+
+*.orig
